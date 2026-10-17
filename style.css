@@ -1090,6 +1090,12 @@ section[id]{scroll-margin-top:72px}
 .cintro .ctype__acts{margin-top:22px}
 .scopesec .scope__panel.is-on{display:flex;grid-template-columns:none}
 
+/* 안드로이드 메타 앱(스레드·인스타·페이스북) 안 브라우저 : 하단 안전 영역을 부풀려 알려 줘서 고정바 아래 빈 띠가 생기는 문제 보정 (html.iab, build.py MO_HEAD) */
+.iab .dock{padding-bottom:0}
+.iab .fab{bottom:70px}
+@media(min-width:600px) and (max-width:899px){.iab .dock{bottom:12px}.iab .fab{bottom:86px}}
+@media(min-width:900px){.iab .fab{bottom:20px}}
+
 /* ---------- 견적 문의 폼 ---------- */
 .inq{word-break:keep-all;padding-top:clamp(32px,4vw,56px)}
 .inq__grid{display:grid;gap:18px;align-items:start}
