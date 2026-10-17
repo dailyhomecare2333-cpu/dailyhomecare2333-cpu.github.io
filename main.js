@@ -338,8 +338,8 @@
 
 /* ---- 예전 탭 주소(clean.html#office / #build)로 들어오면 새 페이지로 ---- */
 (function(){
-  if(!/clean\.html$/.test(location.pathname)) return;
-  var m={office:'clean-office.html',build:'clean-build.html'}[(location.hash||'').slice(1)];
+  if(!/\/clean(\.html)?$/.test(location.pathname)) return;
+  var m={office:'clean-office',build:'clean-build'}[(location.hash||'').slice(1)];
   if(m) location.replace(m);
 })();
 
